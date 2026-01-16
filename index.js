@@ -1,6 +1,11 @@
 const express = require("express")
 const app = express()
 
+const required = process.env.REQUIRED_KEY
+if (!required) {
+  throw new Error("Missing REQUIRED_KEY!")
+}
+
 app.use((req, res, next) => {
   console.log(`REQ ${req.method} ${req.path}`)
   next()
