@@ -12,7 +12,7 @@ app.use((req, res, next) => {
 })
 
 app.get("/", (req, res) => {
-  res.send("Hello Infra")
+  res.send("Hello Infra!")
 })
 
 app.get("/error", (req, res) => {
